@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Автобусний Парк</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>🚍 Автобусний Парк</h1>
+<div class="form">
+    <input type="number" id="busNumber" placeholder="Номер автобуса">
+    <input type="text" id="driverName" placeholder="Водій">
+    <input type="number" id="routeNumber" placeholder="Маршрут">
+    <button onclick="addBus()">Додати</button>
+</div>
+<div class="tables">
+    <div>
+        <h2>🅿️ У парку</h2>
+        <select onchange="loadDepot(this.value)">
+            <option value="bus">За номером автобуса</option>
+            <option value="route">За маршрутом</option>
+        </select>
+        <table id="depotTable"><thead><tr><th>Номер</th><th>Водій</th><th>Маршрут</th><th></th></tr></thead><tbody></tbody></table>
+    </div>
+    <div>
+        <h2>🚦 На маршруті</h2>
+        <select onchange="loadRoute(this.value)">
+            <option value="bus">За номером автобуса</option>
+            <option value="route">За маршрутом</option>
+        </select>
+        <table id="routeTable"><thead><tr><th>Номер</th><th>Водій</th><th>Маршрут</th><th></th></tr></thead><tbody></tbody></table>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
